@@ -133,7 +133,7 @@ header ul li a:hover,
 #moon {
     mix-blend-mode: screen;
     /* Blend mode */
-    transform: translateY(80px);
+    transform: translateY(100px);
     /* Translate vertically */
 }
 
