@@ -174,37 +174,41 @@ header ul li a:hover,
 /* Media query for small screens */
 @media only screen and (max-width: 768px) {
 
-    /* Adjustments for small screens */
+    /* Styling for the header */
     header {
-        display: contents;
-
+        position: fixed;
+        /* Fixed position */
+        width: 98%;
+        /* 95% of the viewport width */
+        display: flex;
+        /* Flex container */
+        justify-content: space-between;
+        /* Space between logo and navigation */
+        align-items: center;
+        /* Center vertically */
+        margin: 5px;
+        /* Margin around the header */
+        z-index: 100;
+        /* Z-index to keep it above other elements */
     }
 
-    ul {
-        position: relative;
+    /* Styling for list items in the navigation menu */
+    header ul li {
+        margin-right: 5px;
+        /* Right margin between list items */
+        
     }
 
-    .active {
-        position: absolute;
-        right: 5px;
-        top: -38px;
+    /* Styling for anchor tags in the navigation menu */
+    header ul li a {
+        padding: 6px 5px;
+        font-size: 13px;
         width: fit-content;
-
-
+        
     }
 
     header .logo {
-        font-size: 24px;
-        padding-left: 5px;
-        width: fit-content;
-
-
-    }
-
-    header ul li a {
-        padding: 6px 8px;
-        font-size: 15px;
-        width: fit-content;
+        font-size: 23px;
 
     }
 
