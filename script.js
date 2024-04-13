@@ -26,7 +26,7 @@ window.onscroll = function () {
     if (scrollY >= 60) {
         title.style.fontSize = 67 + 'px'; // Setting a specific font size
         title.style.position = 'fixed'; // Fixing the title position when scrolling
-        if (scrollY >= 415) {
+        if (scrollY >= 400) {
             title.style.display = 'none'; // Hiding the title when scrolled to a certain position
         } else {
             title.style.display = 'block'; // Displaying the title
@@ -40,6 +40,7 @@ window.onscroll = function () {
         }
     }
 }
+
 
 
 
