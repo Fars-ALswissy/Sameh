@@ -42,5 +42,17 @@ window.onscroll = function () {
 }
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Get references to menu elements
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    // Add event listener to menu toggle
+    menuToggle.addEventListener('click', function () {
+        // Toggle sidebar visibility
+        sidebar.classList.toggle('show');
+    });
+});
+
 
 
