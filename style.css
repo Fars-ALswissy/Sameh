@@ -83,6 +83,7 @@ header ul li a:hover,
     /* Rounded corners */
 }
 
+
 /* Styling for the main section */
 #main {
     position: relative;
@@ -171,41 +172,82 @@ header ul li a:hover,
     /* Margin */
 }
 
+.menu-toggle {
+    display: none;
+}
+
+
+/* Hide sidebar by default on small screens */
+@media only screen and (max-width: 768px) {
+    .sidebar.show {
+        right: 0;
+    }
+
+    /* Styles for sidebar */
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* Initially hidden */
+        background-color: #03283d;
+        color: #fff;
+        /* Start position outside the viewport */
+        transition: right 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Optional: Add shadow */
+        width: 50%;
+        height: 100vh;
+        z-index: 10;
+
+    }
+
+    .sidebar ul {
+        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 20px;
+
+    }
+
+    .sidebar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .sidebar ul li .active {
+        color: #021949;
+    }
+
+    /* Styles for hamburger menu icon */
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin-bottom: 5px;
+    }
+}
+
+
 /* Media query for small screens */
 @media only screen and (max-width: 768px) {
 
-    /* Styling for the header */
-    header {
-        position: fixed;
-        /* Fixed position */
-        width: 98%;
-        /* 95% of the viewport width */
-        display: flex;
-        /* Flex container */
-        justify-content: space-between;
-        /* Space between logo and navigation */
-        align-items: center;
-        /* Center vertically */
-        margin: 5px;
-        /* Margin around the header */
-        z-index: 100;
-        /* Z-index to keep it above other elements */
-    }
-
-    /* Styling for list items in the navigation menu */
-    header ul li {
-        margin-right: 5px;
-        /* Right margin between list items */
-        
-    }
-
-    /* Styling for anchor tags in the navigation menu */
-    header ul li a {
-        padding: 6px 5px;
-        font-size: 13px;
-        width: fit-content;
-        
-    }
 
     header .logo {
         font-size: 23px;
